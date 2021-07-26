@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import Formulario from './components/Formulario';
 import ListaRecetas from './components/ListaRecetas';
+import DrinkDayButton from './components/DrinkDayButton';
 
 import CategoriasProvider from './context/CategoriasContext';
 import RecetasProvider from './context/RecetasContext';
@@ -17,6 +18,7 @@ function App() {
             <div className="row">
               <Formulario />
             </div>
+            <DrinkDayButton />
             <ListaRecetas />
           </div>
         </ModalProvider>
