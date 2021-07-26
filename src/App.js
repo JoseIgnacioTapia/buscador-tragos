@@ -6,6 +6,7 @@ import DrinkDayButton from './components/DrinkDayButton';
 import CategoriasProvider from './context/CategoriasContext';
 import RecetasProvider from './context/RecetasContext';
 import ModalProvider from './context/ModalContext';
+import CardDrinkDay from './components/CardDrinkDay';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
               <Formulario />
             </div>
             <DrinkDayButton />
+            <CardDrinkDay />
             <ListaRecetas />
           </div>
         </ModalProvider>
