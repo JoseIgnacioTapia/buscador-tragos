@@ -4,6 +4,8 @@ import { ModalContext } from '../context/ModalContext';
 import Modal from '@material-ui/core/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 
+import { mostrarIngredientes } from '../helpers/mostrarIngredientes';
+
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -43,23 +45,6 @@ const Receta = ({ receta }) => {
   const { informacion, guardarIdReceta, guardarReceta } =
     useContext(ModalContext);
   // console.log(informacion);
-
-  // Muestra y formatea los ingredientes
-  const mostrarIngredientes = informacion => {
-    let ingredientes = [];
-
-    for (let i = 1; i < 16; i++) {
-      if (informacion[`strIngredient${i}`]) {
-        ingredientes.push(
-          <li>
-            {informacion[`strIngredient${i}`]} {informacion[`strMeasure${i}`]}
-          </li>
-        );
-      }
-    }
-
-    return ingredientes;
-  };
 
   return (
     <div className="col-md-4 mb-3">

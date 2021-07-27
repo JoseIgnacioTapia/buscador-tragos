@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { DrinkDayContext } from '../context/DrinkDayContext';
+
+import { mostrarIngredientes } from '../helpers/mostrarIngredientes';
 
 const CardDrinkDay = () => {
+  const { drinkDay } = useContext(DrinkDayContext);
+
   return (
     <div className="row justify-content-center mt-4">
       <div className="card col-9 flex-row">

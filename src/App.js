@@ -7,22 +7,25 @@ import CategoriasProvider from './context/CategoriasContext';
 import RecetasProvider from './context/RecetasContext';
 import ModalProvider from './context/ModalContext';
 import CardDrinkDay from './components/CardDrinkDay';
+import DrinkDayProvider from './context/DrinkDayContext';
 
 function App() {
   return (
     <CategoriasProvider>
       <RecetasProvider>
         <ModalProvider>
-          <Header />
+          <DrinkDayProvider>
+            <Header />
 
-          <div className="container mt-5">
-            <div className="row">
-              <Formulario />
+            <div className="container mt-5">
+              <div className="row">
+                <Formulario />
+              </div>
+              <DrinkDayButton />
+              <CardDrinkDay />
+              <ListaRecetas />
             </div>
-            <DrinkDayButton />
-            <CardDrinkDay />
-            <ListaRecetas />
-          </div>
+          </DrinkDayProvider>
         </ModalProvider>
       </RecetasProvider>
     </CategoriasProvider>
