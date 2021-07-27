@@ -24,7 +24,7 @@ const DrinkDayProvider = props => {
   }, [lucky]);
 
   return (
-    <DrinkDayContext.Provider value={{ drinkDay, setLucky }}>
+    <DrinkDayContext.Provider value={{ drinkDay, lucky, setLucky }}>
       {props.children}
     </DrinkDayContext.Provider>
   );
